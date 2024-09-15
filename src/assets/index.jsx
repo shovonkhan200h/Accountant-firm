@@ -8,6 +8,9 @@ import payroll from '../assets/payroll.jpg'
 import startup from '../assets/startup.jpg'
 import vat from '../assets/vat.jpg'
 import bookeeping from '../assets/bookkeping.png'
+import tax from '../assets/tax.jpg'
+import sectors from '../assets/sectors.png'
+import why from '../assets/why.jpg'
 
 
 
@@ -21,5 +24,8 @@ export {
     payroll,
     startup,
     vat,
-    bookeeping
+    bookeeping,
+    tax,
+    sectors,
+    why
   };

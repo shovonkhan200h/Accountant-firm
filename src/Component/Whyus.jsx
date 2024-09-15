@@ -12,14 +12,14 @@ const Whyus = () => {
             whyUstext.map((item)=>{
               return <div className="flex flex-col gap-5 w-full border px-2">
                 <img src={item.img} className="w-full h-[80px] lg:h-[200px] object-cover"/>
-                <h2 className="tracking-tight text-center font-semibold text-lg">{item.heading}</h2>
-                <ul>
+                <h2 className="tracking-tight text-center font-bold text-sm lg:text-lg">{item.heading}</h2>
                   {
                     item.text.split("/n").map((line,id)=>(
-                      <li key={id} className="text-sm tracking-tighter lg:text-lg">{line}</li>
+                      <ul>
+                        <li key={id} className="text-[11px] md:text-sm lg:text-lg">{line}</li>
+                      </ul>
                     ))
                   }
-                </ul>
               </div>
             })
            }

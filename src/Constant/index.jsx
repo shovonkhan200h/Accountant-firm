@@ -27,32 +27,32 @@ export const abouts = [
   },
   {
     id: 2,
-    icon: <SiAegisauthenticator />,
+    icon: <GiDeathStar />,
     heading: "Limited Company Accounting",
     text: "All type of company accounting services provided by qualified accountants with a affordable fixed fees no matter what sectors.",
   },
   {
     id: 3,
-    icon: <SiAegisauthenticator />,
+    icon: <GiFlexibleStar />,
     heading: "Payroll Management",
     text: `Financial record of employee gross earnings, payroll deductions and net pay, as well as the employer's related payroll tax liability.`,
   },
   {
     id: 4,
-    icon: <SiAegisauthenticator />,
+    icon: <TbMichelinStarGreen />,
     heading: "Efficient Tax and VAT Management",
     text: `You can improve and reinforce subcontractor retention with our expert Tax and VAT management services that help them take home every penny they've earned.`,
   },
   {
     id: 5,
-    icon: <SiAegisauthenticator />,
+    icon: <TbTopologyStarRing3 />,
     heading: "Company Formation and Startup with Business Loan",
     text: `We’re with you at each step of the incorporation process. We’ll advise on business structure, sort licences and paperwork, and get your finances set up for success.`,
   },
 
   {
     id: 6,
-    icon: <SiAegisauthenticator />,
+    icon: <LiaStarOfLifeSolid />,
     heading: "Qualified Accounting Advisor",
     text: "Your dedicated qualified accountant will always be on hand to answer questions about your business tax compliance. You can contact them via email, phone, or meet them in person.",
   },
@@ -112,7 +112,7 @@ export const heroText = [
 
 import { FaCloud } from "react-icons/fa";
 import { GiChampions } from "react-icons/gi";
-import { bookeeping, payroll, startup, vat } from "../assets";
+import { bookeeping, payroll, sectors, startup, tax, vat, why } from "../assets";
 
 export const headerItem = [
   {
@@ -163,53 +163,112 @@ export const whyUstext = [
     id: 1,
     img:startup,
     heading: "Company Formation & Startup",
-    text: `Appointment of Directors
-Appointment of Secretory
-Issue of subscriber share
-Registered Office Services
-Assistance in opening Bank Account
-Business Plan
-Business Loan`,
+    text: `/nAppointment of Directors
+/nAppointment of Secretory
+/nIssue of subscriber share
+/nRegistered Office Services
+/nAssistance in opening Bank Account
+/nBusiness Plan
+/nBusiness Loan`,
   },
   {
     id: 2,
     img:bookeeping,
     heading: "Bookeeping",
-    text: `Bookkeping Setup Advice
-Keeping Record
-Payable Analysis
-Bank Analysis
-Family run BusinessesReliable Accounting Software
-Expense Tracking
-Collecting Records
-Reliable Servic`,
+    text: `/nBookkeping Setup Advice
+/nKeeping Record
+/nPayable Analysis
+/nBank Analysis
+/nFamily run BusinessesReliable Accounting Software
+/nExpense Tracking
+/nCollecting Records
+/nReliable Servic`,
   },
   {
     id: 3,
     img:vat,
     heading: "VAT",
-    text: `VAT Registration
-VAT Planning and Administration
-Flat Rate Scheme
-Standard Rate Scheme
-VAT Reconciliation
-VAT Returns
-Liasing with HMRC
-VAT Enquiries
-VAT De-Registration`,
+    text: `/nVAT Registration
+/nVAT Planning and Administration
+/nFlat Rate Scheme
+/nStandard Rate Scheme
+/nVAT Reconciliation
+/nVAT Returns
+/nLiasing with HMRC
+/nVAT Enquiries
+/nVAT De-Registration`,
   },
   {
     id: 4,
     img:payroll,
     heading: "Payroll",
-    text: `Monthly Payroll Services
-Benefits Planning
-Online Payee Services
-Payslips amd Pension
-Employee Cost Analysis
-Liasing with HMRC for PAYE matters
-P45, P46, P60 and IR35
-Employee Remuneration Planning
-RTI (Real Time Information`,
+    text: `/nMonthly Payroll Services
+/nBenefits Planning
+/nOnline Payee Services
+/nPayslips amd Pension
+/nEmployee Cost Analysis
+/nLiasing with HMRC for PAYE matters
+/nP45, P46, P60 and IR35
+/nEmployee Remuneration Planning
+/nRTI (Real Time Information`,
+  },
+  {
+    id: 5,
+    img:tax,
+    heading: "Tax",
+    text: `/nAnnual Self-Employed & Company accounts preparation
+/nAnnual Self-Employed & Company Tax Returns
+/nTax Dispute
+/nCorresponding with HMRC
+/nHMRC Investigation
+/nCorporate and Personal Tax Admin
+/nFinancial Reporting
+/nPartership Accounts
+/nRental accounts
+/nProperty Tax`,
+  },
+  {
+    id: 6,
+    img:payroll,
+    heading: "Company Accounts",
+    text: `/nYear End Accounts
+/nCompany House Submission
+/nOnline Payee Services
+/nReview Financial and Management Systems
+/nIdentify problem areas: strength, weakness, opportunities and threats
+/nCompile with Statutory Requirements
+/nspecialised/Niche Accounts
+/nCharity Accounts`,
+  },
+  {
+    id: 7,
+    img:sectors,
+    heading: "Sector we serve",
+    text: `/nCharities
+/nIT Consultancy
+/nRestaurant and Takeaway
+/nRestaurant and Hospitality
+/nSolicitor Firm
+/nFamily run Businesses
+/nContractors and Suppliers
+/nRetailer and Wholesaler
+/nRecruitment Agencies
+/nBuilding and Construction
+/nTransport Companies`,
+  },
+  {
+    id: 8,
+    img:why,
+    heading: "Why us?",
+    text: `/nFirst time free Consultation
+/nHonest Evaluation
+/nAffordable Packages
+/nTransparent Bookeeping
+/n24/7 Support Team
+/nClear Communication
+/nCommunity based Solution
+/nNo Hidden Fees
+/nWe value trustworthiness
+/nCreative Marketing`,
   }
 ];
