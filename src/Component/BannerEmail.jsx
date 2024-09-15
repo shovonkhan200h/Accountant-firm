@@ -1,44 +1,49 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const BannerEmail = () => {
-  // State to store form inputs
-  const [formData, setFormData] = useState({
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const form = useRef();
+  const [emailSent, setEmailSent] = useState(false); // State to manage success message
 
-  // Handle input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    // Generate mailto link
-    const mailtoLink = `mailto:shovonkhan00@gmail.com?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(
-      `From: ${formData.email}\n\nMessage: ${formData.message}`
-    )}`;
+    emailjs
+      .sendForm("service_ydd59i4", "template_6ulki7m", form.current, {
+        publicKey: "Hf2s-PKrMl9Muo3G-",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setEmailSent(true); // Set success message visible
+          setTimeout(() => setEmailSent(false), 2000); // Hide after 2 seconds
 
-    // Open the mailto link in the user's email client
-    window.location.href = mailtoLink;
+          form.current.reset(); // Reset the form if needed
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
     <section id="heroForm" className="bg-white dark:bg-gray-900 rounded-2xl">
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md ">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-          Contact Us
+      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md  w-full">
+        <h2 className="lg:mb-4 lg:text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+          Get Free Consultation
         </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-          Need details about our Business plan? Let us know.
+        <p className="lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl text-[10px] lg:text-lg">
+          Need details about our Accountant service? Let us know.
         </p>
-        <form onSubmit={handleSubmit} className="space-y-8">
+
+        {/* Success message */}
+        {emailSent && (
+          <div className="text-center text-green-600 mb-4">
+            Your message has been sent successfully!
+          </div>
+        )}
+
+        <form ref={form} onSubmit={sendEmail} className="space-y-2 lg:space-y-8">
           <div>
             <label
               htmlFor="email"
@@ -49,10 +54,8 @@ const BannerEmail = () => {
             <input
               type="email"
               id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              name="to_email"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-1 lg:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="name@flowbite.com"
               required
             />
@@ -67,10 +70,8 @@ const BannerEmail = () => {
             <input
               type="text"
               id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              name="to_subject"
+              className="block p-1 lg:p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="Let us know how we can help you"
               required
             />
@@ -85,8 +86,6 @@ const BannerEmail = () => {
             <textarea
               id="message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               rows="6"
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
               placeholder="Leave a comment..."

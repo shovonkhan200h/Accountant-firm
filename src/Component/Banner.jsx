@@ -6,15 +6,22 @@ import { headerItem } from "../Constant";
 
 const Banner = () => {
   return (
-    <div id="home" className="text-white relative h-screen bg-gradient-to-r from-rose-500 to-blue-500 items-center justify-center grid grid-cols-2 px-5 gap-4">
+    <div id="home" className="relative w-full min-h-screen bg-gradient-to-r from-rose-500 to-blue-500 items-center justify-center flex gap-4 p-5">
+      
+      
+
+      <div className="w-full">
       <BannerContent/>
-      <div className="w-full" >
+      </div>
+      
+      <div className="w-full">
         <BannerEmail/>
       </div>
-      <div className="h-[40px] bg-black absolute inset-x-0 bottom-0 flex justify-evenly items-center">
+
+      <div className="h-[50px] bg-black absolute inset-x-0 -bottom-5 flex justify-evenly items-center">
         {
           headerItem.map((item,id)=>{
-            return <div className="flex items-center gap-2 font-semibold justify-center" key={id}>
+            return <div className="flex items-center gap-2 font-semibold justify-center text-white text-sm lg:text-lg" key={id}>
               <a>{item.icon}</a>
               <h>{item.text}</h>
             </div>

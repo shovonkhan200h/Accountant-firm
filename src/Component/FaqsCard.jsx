@@ -14,7 +14,7 @@ const FaqsCard = (props) => {
 
   return (
     <div
-      className="space-y-3 mt-5 overflow-hidden border-b"
+      className="lg:space-y-3 mt-5 overflow-hidden border-b"
       key={idx}
       onClick={handleOpenAnswer}
     >
@@ -58,7 +58,7 @@ const FaqsCard = (props) => {
         style={state ? { height: answerH } : { height: "0px" }}
       >
         <div>
-          <p className="text-gray-500">{faqsList.a}</p>
+          <p className="text-gray-500 text-sm lg:text-lg">{faqsList.a}</p>
         </div>
       </div>
     </div>
@@ -78,12 +78,11 @@ Timely submission of company accounts and tax returns before deadline`,
     },
     {
       q: "Can We Submit Self-Employed Account And Tax Returns?",
-      a: `Definitely! We are expert in bookkeeping and company accountancy.
-We use market leading Accounting Software
-We follow Company House and HMRC guidence
-Accurate books and record analysis
-On time communication with Directors
-Timely submission of company accounts and tax returns before deadline`
+      a: `We help Sole Traders, Self-Employed and Rental Accounts
+We make sure to submit all accounts before 31st January
+Accurate Books and Record analysis with reliable software
+We can help you to appeal for late filing penalties
+On-time reminders to owners to submit their self-assesment`
     },
     {
       q: "Can We Help With Payroll And Mortgage",

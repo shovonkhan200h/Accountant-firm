@@ -8,6 +8,9 @@ export default {
     extend: {
       backgroundImage: {
         'heroImg': "url('/src/assets/1.jpg')"
+      },
+      screens: {
+        'xs': '390px', // min-width
       }
     },
   },

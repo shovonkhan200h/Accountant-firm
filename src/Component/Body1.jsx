@@ -1,6 +1,6 @@
 import React from "react";
 import { body1Text } from "../Constant";
-import { FaRegStar } from "react-icons/fa";
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const Body1 = () => {
   const scrollToBannerEmail = () => {
@@ -16,19 +16,19 @@ const Body1 = () => {
     >
       <div className="flex flex-col justify-between gap-10 items-center">
         <div className="font-semibold text-center">
-          <h2 className="text-[48px] leading-[57px]">
+          <h2 className="text-lg lg:text-[48px] leading-[57px]">
             Achieve Financial Clarity in 3 Simple Steps
           </h2>
           <p>Uncomplicated and Stress-Free</p>
         </div>
 
-        <div className="flex text-center mt-20">
+        <div className="flex text-sm gap-3 w-full">
           {body1Text.map((item, id) => {
             return (
-              <div className="flex flex-col justify-center items-center">
-                <a className="text-[70px] text-rose-950">{item.icon}</a>
-                <h2 className="text-[32px] font-semibold">{item.heading}</h2>
-                <p>{item.text}</p>
+              <div className="grid gap-2" key={id}>
+                <div className="flex justify-center text-[30px] lg:text-[70px]"><a>{item.icon}</a></div>
+                <h2 className="font-semibold lg:text-lg">{item.heading}</h2>
+                <p className="text-sm tracking-tighter lg:text-lg">{item.text}</p>
               </div>
             );
           })}
@@ -38,11 +38,11 @@ const Body1 = () => {
       <div className="flex flex-col gap-5">
         <div className="flex items-center justify-center gap-3">
           <div className="flex text-yellow-500  border p-1 rounded-2xl">
-            <FaRegStar />
-            <FaRegStar />
-            <FaRegStar />
-            <FaRegStar />
-            <FaRegStar />
+          <FaStar /> {/* Full Star */}
+          <FaStar /> {/* Full Star */}
+          <FaStar /> {/* Full Star */}
+          <FaStar /> {/* Full Star */}
+          <FaStarHalfAlt /> {/* Half Star */}
           </div>
           <p>Rated 4.6/5 Stars by Many Happy Businesses</p>
         </div>

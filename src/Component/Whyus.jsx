@@ -5,37 +5,25 @@ import { SiNike } from "react-icons/si";
 const Whyus = () => {
   return (
     <section className="container mx-auto mb-20" id="whyus">
-      <h2 className="text-center mt-20 mb-10 text-[30px]">Why Clients choose us</h2>
-      <div className="flex gap-5">
-        {whyUstext.map((item, id) => {
-          return (
-            <div key={item.id} className="flex flex-col gap-5 text-center border p-5 relative">
-              
-              <div className="w-full">
-                <img src={item.img} className="w-full h-[200px] object-cover"/>
-              </div>
-
-              <div className="w-full">
-                <h3 className="font-semibold">{item.heading}</h3>
-              </div>
-
-              <div className="w-full">
-                
+      <h2 className="text-center  text-[30px] font-bold">Why Clients choose us</h2>
+      <div className="border-b-2 border-rose-900 mt-2 mb-5 "></div>
+        <div className="grid grid-cols-2 gap-5 lg:grid lg:grid-cols-4">
+           {
+            whyUstext.map((item)=>{
+              return <div className="flex flex-col gap-5 w-full border px-2">
+                <img src={item.img} className="w-full h-[80px] lg:h-[200px] object-cover"/>
+                <h2 className="tracking-tight text-center font-semibold text-lg">{item.heading}</h2>
                 <ul>
-                  {item.text.split("\n").map((line, index) => (
-                    <li key={id} className="mt-5">{line}</li>
-                  ))}
+                  {
+                    item.text.split("/n").map((line,id)=>(
+                      <li key={id} className="text-sm tracking-tighter lg:text-lg">{line}</li>
+                    ))
+                  }
                 </ul>
               </div>
-
-              <div className="absolute inset-x-0 -bottom-5 bg-yellow-400 p-2 rounded-2xl">
-                <button className="">Get Started</button>
-              </div>
-
-            </div>
-          );
-        })}
-      </div>
+            })
+           }
+        </div>
     </section>
   );
 };

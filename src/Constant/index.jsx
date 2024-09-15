@@ -15,7 +15,7 @@ export const LINKS = [
   { text: "Our Review", targetId: "ourreview" },
   { text: "Faq", targetId: "faq" },
   { text: "Why us", targetId: "whyus" },
-  { text: "Contact", targetId: "contact" },
+  { text: "Contact", targetId: "heroForm" },
 ];
 
 export const abouts = [

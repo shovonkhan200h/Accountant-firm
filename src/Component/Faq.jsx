@@ -4,7 +4,7 @@ import { heroimg } from '../assets'
 
 const Faq = (props) => {
   return (
-    <section className='container mx-auto' id='faq'>
+    <section className='container mx-auto mb-10' id='faq'>
         <div className='flex justify-center items-center'>
             <div className='w-full'>
                 <img src={heroimg} className=''/>

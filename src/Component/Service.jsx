@@ -4,7 +4,8 @@ import { abouts } from "../Constant";
 const Service = () => {
   return (
     <section className="mb-10 py-5" id="ourservice">
-      <h2 className="text-center mb-5 text-[30px] font-semibold">Our Services</h2>
+      <h2 className="text-center  text-[30px] font-bold">Our Services</h2>
+      <div className="border-b-2 mb-2 border-rose-900 "></div>
       <div className="container mx-auto">
         <div className="grid grid-cols-2 lg:grid lg:grid-cols-5 gap-3 lg:gap-3 p-1 lg:p-0">
           {abouts.map((item) => {

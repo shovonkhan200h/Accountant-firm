@@ -8,7 +8,7 @@ const Customer = () => {
         <div className="mt-5">
           <div class="mt-4  bg-white max-w-6xl max-md:max-w-md mx-auto">
             <div class="mb-12 text-center">
-              <h2 class="text-gray-800 lg:text-3xl font-extrabold">
+              <h2 class="text-gray-800 lg:text-3xl text-[30px] font-bold">
                 What our happy client say
               </h2>
               <div className="border-b-2 border-rose-900 mt-2"></div>
@@ -74,7 +74,7 @@ const Customer = () => {
 
                 <div class="mt-6">
                   <p class="text-gray-800 text-sm leading-relaxed">
-                    Exceptional customer service from Farid & Co accounting
+                    Exceptional customer service from Angel Lili accounting
                     firm. Responsive, friendly, and always ready to assist.
                   </p>
                 </div>
@@ -206,7 +206,7 @@ const Customer = () => {
 
                 <div class="mt-6">
                   <p class="text-gray-800 text-sm leading-relaxed">
-                    Farid and Co is very reliable accounting firm. Their
+                    Angel Lili is very reliable accounting firm. Their
                     expertise keeps our books in check and ensures compliance.
                     We highly recommend them.
                   </p>
